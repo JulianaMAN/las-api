@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 const { listarProdutosAPI, listarCategoriasAPI } = require("./api-service");
 
 async function processarOpcao(opcao) {
@@ -22,6 +23,39 @@ async function processarOpcao(opcao) {
     default:
       throw new Error(`Opção inválida: ${opcao}`);
   }
+=======
+const { listarProdutos, listarCategorias } = require("./api-service");
+const { formatarValor } = require("./objetos");
+
+async function processarOpcao(opcao) {
+  console.log(`A opção digitada foi: ${opcao}`);
+  let retorno;
+  let produtos;
+  let categorias;
+
+  switch (opcao.toUpperCase()) {
+    case "PRODUTOS":
+      retorno = await listarProdutos();
+      break;
+    case "DESCONTOS":
+      produtos = formataValorProdutos(await listarProdutos());
+      categorias = await listarCategorias();
+
+      retorno = produtos.map((p) => {
+        const categoria = categorias.find((c) => p.categoria === c.nome);
+        return { ...p, desconto: categoria?.desconto || 0 };
+      });
+      break;
+    default:
+      throw new Error(`Opção inválida: ${opcao}`);
+      
+  }
+  return retorno;
+}
+
+function formataValorProdutos(produtos) {
+  return produtos.map((p) => ({ ...p, preco: formatarValor(p.preco) }));
+>>>>>>> 222afe43febb8a5bf8463b4af5406833f275d8fd
 }
 
 async function run() {
@@ -63,5 +97,9 @@ function adicionaDescontoCategoria(listaProdutos, categorias) {
 
 module.exports = {
   processarOpcao,
+<<<<<<< HEAD
   formatarPrecoProdutos,
 };
+=======
+};
+>>>>>>> 222afe43febb8a5bf8463b4af5406833f275d8fd

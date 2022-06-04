@@ -57,7 +57,11 @@
     }
   },
   "dependencies": {
+<<<<<<< HEAD
     "node-fetch": "^2.6.7",
     "sqlite3": "^5.0.2"
+=======
+    "node-fetch": "^2.6.7"
+>>>>>>> 222afe43febb8a5bf8463b4af5406833f275d8fd
   }
 }
