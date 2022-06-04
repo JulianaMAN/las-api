@@ -59,7 +59,6 @@
   },
   "dependencies": {
     "node-fetch": "^2.6.7",
-    "sqlite3": "^5.0.2",
     "body-parser": "^1.20.0",
     "consign": "^0.1.6",
     "cpf-cnpj-validator": "^1.0.3",
