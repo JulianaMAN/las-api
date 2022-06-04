@@ -2,6 +2,7 @@
 const pool = require("../infraestrutura/database/conexao");
 const fetch = require("node-fetch");
 const repositorio = require("../repositorios/usuario");
+//const { cpf } = require("cpf-cnpj-validator");
 
 class Usuarios {
   listar() {
@@ -40,6 +41,8 @@ class Usuarios {
          nomeEhValido = true;
        }
      }
+    
+    //const cpfEhValido = cpf.isValid(usuario.cpf);
     const urlEhValida = await this.isURLValida(usuario?.urlFotoPerfil);
 
     const validacoes = [
@@ -53,6 +56,11 @@ class Usuarios {
         valido: urlEhValida,
         mensagem: "URL deve uma URL válida",
       },
+      // {
+      //   nome: "cpf",
+      //   valido: cpfEhValido,
+      //   mensagem: "CPF deve ser válido"
+      // }
     ];
 
     const erros = validacoes.filter((campo) => !campo.valido);

@@ -54,6 +54,7 @@
       "global": {
         "lines": 50
       }
+<<<<<<< HEAD
     },
     "testResultsProcessor": "jest-sonar-reporter"
   },
@@ -66,5 +67,11 @@
     "mysql": "^2.18.1",
     "node-fetch": "^2.6.7",
     "nodemon": "^2.0.15"
+=======
+    }
+  },
+  "dependencies": {
+    "node-fetch": "^2.6.7"
+>>>>>>> 222afe43febb8a5bf8463b4af5406833f275d8fd
   }
 }
