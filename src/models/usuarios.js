@@ -41,8 +41,7 @@ class Usuarios {
          nomeEhValido = true;
        }
      }
-    
-    //const cpfEhValido = cpf.isValid(usuario.cpf);
+      //const cpfEhValido = cpf.isValid(usuario.cpf);
     const urlEhValida = await this.isURLValida(usuario?.urlFotoPerfil);
 
     const validacoes = [
@@ -55,7 +54,7 @@ class Usuarios {
         nome: "urlFotoPerfil",
         valido: urlEhValida,
         mensagem: "URL deve uma URL válida",
-      },
+      }
       // {
       //   nome: "cpf",
       //   valido: cpfEhValido,

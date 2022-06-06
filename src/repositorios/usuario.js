@@ -33,16 +33,16 @@ class Usuario {
     return query(sql, id).then((data) => data[0]);
 }
 
-// isNomeUsuarioUtilizado(nome) {
-//     const sql = "SELECT * FROM usuarios WHERE nome = ?";
-//     return query(sql, nome).then((data) => {
-//         if (data.length > 0) {
-//           return true;
-//         } else {
-//           return false;
-//         }
-//       });
-//     }
+isNomeUsuarioUtilizado(nome) {
+    const sql = "SELECT * FROM usuarios WHERE nome = ?";
+    return query(sql, nome).then((data) => {
+        if (data.length > 0) {
+          return true;
+        } else {
+          return false;
+        }
+      });
+    }
 
     async atualizaContato(usuarioId, valores) {
       const sql = "UPDATE usuarios SET ? WHERE id = ?";
