@@ -1,3 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <testExecutions version="1">
+  <file path="C:\Users\Lenovo\Desktop\backup2107\las-api\__tests__\eventos.test.js">
+    <testCase name="API De Eventos Listar Eventos" duration="68"/>
+    <testCase name="API De Eventos Buscar evento por id existente" duration="17"/>
+    <testCase name="API De Eventos Buscar evento por id inexistente" duration="16"/>
+    <testCase name="API De Eventos Buscar evento por status Em Andamento" duration="23"/>
+    <testCase name="API De Eventos Buscar evento por status Agendado" duration="16"/>
+    <testCase name="API De Eventos Buscar evento por status Finalizado" duration="16"/>
+    <testCase name="API De Eventos Buscar evento por status Inválido" duration="13"/>
+    <testCase name="API De Eventos Valida data: data de início vazia" duration="1"/>
+    <testCase name="API De Eventos Valida data: data de fim vazia" duration="0"/>
+    <testCase name="API De Eventos Valida data: data de início no passado" duration="1"/>
+    <testCase name="API De Eventos Data válida" duration="1"/>
+    <testCase name="API De Eventos Data de fim menor que data de início" duration="1"/>
+    <testCase name="API De Eventos Excluir Evento" duration="105"/>
+    <testCase name="API De Eventos Alterar evento pelo ID valido " duration="43"/>
+    <testCase name="API De Eventos Não alterar evento com ID invalido " duration="11"/>
+  </file>
 </testExecutions>
