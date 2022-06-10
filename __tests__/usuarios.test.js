@@ -1,8 +1,5 @@
 const supertest = require("supertest");
 const customExpress = require("../src/config/customExpress");
-// const usuarios = require("../src/controllers/usuarios");
-// const { senhaUsuarioId } = require("../src/models/usuarios");
-// const { senhaUsuario } = require("../src/repositorios/usuario");
 const request = supertest(customExpress());
 
 jest.mock("../src/repositorios/usuario");
