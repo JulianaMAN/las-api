@@ -1,20 +1,3 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <testExecutions version="1">
-  <file path="C:\Users\Lenovo\Desktop\backup2107\las-api\__tests__\usuarios.test.js">
-    <testCase name="API De Usuários Listar usuários" duration="62"/>
-    <testCase name="API De Usuários Buscar usuário por id existente" duration="20"/>
-    <testCase name="API De Usuários Buscar usuário por id inexistente" duration="13"/>
-    <testCase name="API De Usuários Adicionar usuário com dados válidos" duration="50"/>
-    <testCase name="API De Usuários Adicionar usuário com dados inválidos" duration="77"/>
-    <testCase name="API De Usuários Buscar usuário por nome existente" duration="9"/>
-    <testCase name="API De Usuários Buscar usuário por nome inexistente" duration="12"/>
-    <testCase name="API De Usuários Excluir Usuário" duration="571"/>
-    <testCase name="API De Usuários Alterar senha pelo ID" duration="272"/>
-    <testCase name="API De Usuários Alterar contato pelo ID" duration="30"/>
-    <testCase name="API De Usuários Alterar usuario pelo ID valido " duration="44"/>
-    <testCase name="API De Usuários Não alterar usuario com ID invalido " duration="8"/>
-    <testCase name="API De Usuários Alterar endereço pelo ID valido " duration="15"/>
-    <testCase name="API De Usuários Não alterar endereço com ID invalido " duration="12"/>
-    <testCase name="API De Usuários Não deve achar dados-pessoais pelo ID inexistente" duration="7"/>
-  </file>
 </testExecutions>
