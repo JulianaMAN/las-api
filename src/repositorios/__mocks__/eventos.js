@@ -1,5 +1,3 @@
-// const query = require("../infraestrutura/database/queries");
-
 const eventosMock = require("./eventos.json");
 
 const moment = require("moment");

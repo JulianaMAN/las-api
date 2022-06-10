@@ -1,4 +1,3 @@
-//const { status } = require("express/lib/response");
 const query = require("../infraestrutura/database/queries");
 
 class Evento {
