@@ -1,5 +1,4 @@
 const pool = require("../infraestrutura/database/conexao");
-// const fetch = require("node-fetch");
 const repositorio = require("../repositorios/tiposVendas");
 
 class Venda {

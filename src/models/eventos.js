@@ -61,7 +61,7 @@ async isURLValida(url) {
     if (existemErros) {
       res.status(400).json(erros);
     } else {
-     // Eventos.adicionar(evento)
+   
       const sql = "INSERT INTO Eventos SET ?";
 
       pool.query(sql, evento, (erro) => {
