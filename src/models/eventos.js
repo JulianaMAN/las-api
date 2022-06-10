@@ -41,7 +41,7 @@ async isURLValida(url) {
          nomeEhValido = true;
        }
      }
-  const urlEhValida = await this.isURLValida(evento.urlFotoPerfil);
+  const urlEhValida = await this.isURLValida(evento.urlFoto);
 
   const validacoes = [
     {
@@ -50,7 +50,7 @@ async isURLValida(url) {
       mensagem: "Nome deve ser informado e deve ser único",
     },
     {
-      nome: "urlFotoPerfil",
+      nome: "urlFoto",
       valido: urlEhValida,
       mensagem: "URL deve uma URL válida",
     },
