@@ -122,12 +122,13 @@ describe("API De Usuários", () => {
       expect(resp.body).toEqual([]);
     });
 
-    test("Excluir Usuário",async () => {
-      const resp = await request.delete("/usuarios/3");
-      expect(resp.statusCode).toBe(200);
-      expect(resp.body).toEqual({
-        "id": 3
-      });
+    test("Excluir Usuário existente",async () => {
+      const resp = await request.delete("/usuarios/1");
+      expect(resp.statusCode).toBe(204);
+    });
+    test("Excluir Usuário inexistente",async () => {
+      const resp = await request.delete("/usuarios/9");
+      expect(resp.statusCode).toBe(404);
     });
    
   test("Alterar senha pelo ID", async () => {
