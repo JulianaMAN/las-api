@@ -32,6 +32,11 @@ class Usuario {
     return query(sql,nome);
   }
 
+  async alterar(id,valores) {
+    const sql = "UPDATE Usuarios SET ? WHERE id = ?";
+    return query(sql,[valores, id]);
+  }
+
   async buscarPorId(id) {
     const sql =
       "SELECT id, nomeCompleto, dataNascimento, rg, cpf FROM usuarios WHERE id = ?";

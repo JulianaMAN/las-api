@@ -1,5 +1,4 @@
 
-const pool = require("../infraestrutura/database/conexao");
 const fetch = require("node-fetch");
 const repositorio = require("../repositorios/usuario");
 
@@ -68,15 +67,8 @@ class Usuarios {
     }
     
 
-  alterar(id, valores, res, next) {
-    const sql = "UPDATE Usuarios SET ? WHERE id = ?";
-    pool.query(sql, [valores, id], (erro) => {
-      if (erro) {
-        next(erro);
-      } else {
-        res.status(200).json(valores);
-      }
-    });
+  alterar(id, valores) {
+   return repositorio.alterar(id,valores);
   }
 
   async excluir(id) {

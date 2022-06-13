@@ -23,7 +23,14 @@ module.exports = (app) => {
   app.put("/usuarios/:id", (req, res, next) => {
     const id = parseInt(req.params.id);
     const valores = req.body;
-    Usuarios.alterar(id, valores, res, next);
+    return Usuarios.alterar(id, valores, res, next)
+    .then((resultado) => { 
+      if (resultado) {
+        return res.json(valores);
+      }
+       return res.status(404).end();
+    })
+    .catch((erros) => next(erros));
   });
 
   app.delete("/usuarios/:id", (req, res, next) => {

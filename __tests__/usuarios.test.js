@@ -152,7 +152,7 @@ describe("API De Usuários", () => {
   test("Não alterar usuario com ID invalido ", async () => {
     const alteracoes = { nomeCompleto: "Pedro da Silva" };
     const resp = await request.put("/usuarios/99").send(alteracoes);
-    expect(resp.statusCode).toBe(200);
+    expect(resp.statusCode).toBe(404);
   });
 
   test("Alterar endereço pelo ID valido ", async () => {
@@ -165,7 +165,7 @@ describe("API De Usuários", () => {
   test("Não alterar endereço com ID invalido ", async () => {
     const alteracoes = { endereco: "Rua da Vide" };
     const resp = await request.put("/usuarios/99").send(alteracoes);
-    expect(resp.statusCode).toBe(200);
+    expect(resp.statusCode).toBe(404);
   });
 
  

@@ -25,6 +25,10 @@ class Usuario {
   buscarPorNome(nome) {
     return Promise.resolve(usuariosMock.filter((usuario) => usuario.nome === nome));    
   }
+
+  alterar(id) {
+    return Promise.resolve(usuariosMock.find((usuario) => usuario.id === id));
+  }
   
 }
 
