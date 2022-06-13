@@ -1,4 +1,4 @@
-const eventosMock = require("./eventos.json");
+const eventosMock = require("./evento.json");
 
 const moment = require("moment");
 

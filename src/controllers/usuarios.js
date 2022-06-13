@@ -28,7 +28,14 @@ module.exports = (app) => {
 
   app.delete("/usuarios/:id", (req, res, next) => {
     const id = parseInt(req.params.id);
-    Usuarios.excluir(id, res, next);
+    Usuarios.excluir(id)
+    .then((resultado) => { 
+      if (resultado) {
+        return res.status(204).end();
+      }
+       return res.status(404).end();
+    })
+    .catch((erros) => next(erros));
   });
 
   app.get("/usuarios/nome/:nome", (req, res, next) => {

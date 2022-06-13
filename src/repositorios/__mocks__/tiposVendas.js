@@ -1,4 +1,4 @@
-const tiposVendasMock = require("./tiposVendas.json");
+const tiposVendasMock = require("./tiposVenda.json");
 
 class TiposVendas {
     listar() {

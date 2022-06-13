@@ -11,6 +11,11 @@ class Usuario {
     return query(sql);
   }
 
+  excluir(id) {
+    const sql = "DELETE FROM Usuarios WHERE id = ?";
+    return query(sql,id);
+  }
+
   async atualizaUsuarioId(usuarioId, valores) {
     const sql = "UPDATE usuarios SET ? WHERE id = ?";
     console.log(valores);

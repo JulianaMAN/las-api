@@ -1,4 +1,4 @@
-const usuariosMock = require("./usuarios");
+const usuariosMock = require("./usuarios.json");
 
 class Usuario {
   adicionar(usuario) {
@@ -7,6 +7,10 @@ class Usuario {
 
   listar() {
     return Promise.resolve(usuariosMock);
+  }
+
+  excluir(id) {
+    return Promise.resolve(usuariosMock.find((usuario) => usuario.id === id));
   }
 
   buscarPorId(id) {
