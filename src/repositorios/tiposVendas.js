@@ -11,16 +11,10 @@ class Venda {
     return query(sql,id);
   }
 
-//   listar() {
-//       const sql ="SELECT * FROM tiposVendas";
-//       return query(sql);
-//   }
-
-//   buscarPorId(id) {
-//     const sql =
-//       "SELECT descricao FROM tiposVendas WHERE id = ?";
-//     return query(sql, id).then((data) => data[0]);
-// }
+  async alterar(id,valores) {
+    const sql = "UPDATE tiposvendas SET ? WHERE id = ?";
+    return query(sql,[valores, id]);
+  }
 
 }
 

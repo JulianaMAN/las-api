@@ -47,6 +47,6 @@ describe("API De Tipos de Vendas", () => {
     test("Não alterar tipos de venda com ID invalido ", async () => {
       const alteracoes = { descricao: "comida" };
       const resp = await request.put("/tipos-vendas/99").send(alteracoes);
-      expect(resp.statusCode).toBe(200);
+      expect(resp.statusCode).toBe(404);
     });
 });

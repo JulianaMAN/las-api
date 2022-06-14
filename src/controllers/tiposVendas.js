@@ -21,7 +21,14 @@ app.get("/tipos-vendas",(_req, res, next) => {
   app.put("/tipos-vendas/:id", (req, res, next) => {
     const id = parseInt(req.params.id);
     const valores = req.body;
-    Venda.alterar(id, valores, res, next);
+    return tiposVendas.alterar(id, valores, res, next)
+    .then((resultado) => { 
+      if (resultado) {
+        return res.json(valores);
+      }
+       return res.status(404).end();
+    })
+    .catch((erros) => next(erros));
   });
 
   app.delete("/tipos-vendas/:id", (req, res, next) => {
@@ -35,6 +42,5 @@ app.get("/tipos-vendas",(_req, res, next) => {
     })
     .catch((erros) => next(erros));
   });
-
   
 };
