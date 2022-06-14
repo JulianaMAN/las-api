@@ -139,6 +139,6 @@ describe("API De Eventos", () => {
         test("Não alterar evento com ID invalido ", async () => {
           const alteracoes = { nome: "carnaval Savador" };
           const resp = await request.put("/eventos/99").send(alteracoes);
-          expect(resp.statusCode).toBe(200);
+          expect(resp.statusCode).toBe(404);
         });
       });

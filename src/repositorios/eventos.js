@@ -16,6 +16,11 @@ class Evento {
     return query(sql,id);
   }
 
+  async alterar(id,valores) {
+    const sql = "UPDATE Eventos SET ? WHERE id = ?";
+    return query(sql,[valores, id]);
+  }
+
   buscarPorId(id) {
     const sql = "SELECT * FROM Eventos WHERE id = ?";
     return query(sql,id);

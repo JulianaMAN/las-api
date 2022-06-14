@@ -35,13 +35,16 @@ module.exports = (app) => {
       app.put("/eventos/:id", (req, res, next) => {
         const id = parseInt(req.params.id);
         const valores = req.body;
-        Eventos.alterar(id, valores, res, next);
-      });
+        return Eventos.alterar(id, valores, res, next)
+    .then((resultado) => { 
+      if (resultado) {
+        return res.json(valores);
+      }
+       return res.status(404).end();
+    })
+    .catch((erros) => next(erros));
+  });
     
-      // app.delete("/eventos/:id", (req, res, next) => {
-      //   const id = parseInt(req.params.id);
-      //   Eventos.excluir(id, res, next);
-      // });
       app.delete("/eventos/:id", (req, res, next) => {
         const id = parseInt(req.params.id);
         Eventos.excluir(id)
