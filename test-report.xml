@@ -1,54 +1,54 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <testExecutions version="1">
-  <file path="C:\Users\Lenovo\Desktop\backup2107\las-api\__tests__\tiposVendas.test.js">
-    <testCase name="API De Tipos de Vendas Listar Tipos de Vendas" duration="71"/>
-    <testCase name="API De Tipos de Vendas Buscar Tipos de vendas por id existente" duration="11"/>
-    <testCase name="API De Tipos de Vendas Buscar Tipos de vendas por id inexistente" duration="10"/>
-    <testCase name="API De Tipos de Vendas Excluir Tipo de vendas existente" duration="10"/>
-    <testCase name="API De Tipos de Vendas Excluir Tipo de vendas inexistente" duration="9"/>
-    <testCase name="API De Tipos de Vendas Alterar tipos de venda pelo ID valido " duration="212"/>
-    <testCase name="API De Tipos de Vendas Não alterar tipos de venda com ID invalido " duration="13"/>
-  </file>
   <file path="C:\Users\Lenovo\Desktop\backup2107\las-api\__tests__\eventos.test.js">
-    <testCase name="API De Eventos Listar Eventos" duration="70"/>
-    <testCase name="API De Eventos Buscar evento por id existente" duration="12"/>
+    <testCase name="API De Eventos Listar Eventos" duration="53"/>
+    <testCase name="API De Eventos Buscar evento por id existente" duration="11"/>
     <testCase name="API De Eventos Buscar evento por id inexistente" duration="9"/>
-    <testCase name="API De Eventos Buscar evento por status Em Andamento" duration="32"/>
-    <testCase name="API De Eventos Buscar evento por status Agendado" duration="18"/>
-    <testCase name="API De Eventos Buscar evento por status Finalizado" duration="17"/>
-    <testCase name="API De Eventos Buscar evento por status Inválido" duration="11"/>
+    <testCase name="API De Eventos Buscar evento por status Em Andamento" duration="22"/>
+    <testCase name="API De Eventos Buscar evento por status Agendado" duration="13"/>
+    <testCase name="API De Eventos Buscar evento por status Finalizado" duration="10"/>
+    <testCase name="API De Eventos Buscar evento por status Inválido" duration="13"/>
     <testCase name="API De Eventos Valida data: data de início vazia" duration="1"/>
     <testCase name="API De Eventos Valida data: data de fim vazia" duration="0"/>
     <testCase name="API De Eventos Valida data: data de início no passado" duration="2"/>
     <testCase name="API De Eventos Data válida" duration="2"/>
     <testCase name="API De Eventos Data de fim menor que data de início" duration="1"/>
-    <testCase name="API De Eventos Excluir Evento existente" duration="17"/>
-    <testCase name="API De Eventos Excluir Evento inexistente" duration="7"/>
-    <testCase name="API De Eventos Alterar evento pelo ID valido " duration="46"/>
-    <testCase name="API De Eventos Não alterar evento com ID invalido " duration="13"/>
+    <testCase name="API De Eventos Excluir Evento existente" duration="8"/>
+    <testCase name="API De Eventos Excluir Evento inexistente" duration="8"/>
+    <testCase name="API De Eventos Alterar evento pelo ID valido " duration="70"/>
+    <testCase name="API De Eventos Não alterar evento com ID invalido " duration="17"/>
   </file>
   <file path="C:\Users\Lenovo\Desktop\backup2107\las-api\__tests__\usuarios.test.js">
-    <testCase name="API De Usuários Listar usuários" duration="98"/>
-    <testCase name="API De Usuários Buscar usuário por id existente" duration="26"/>
-    <testCase name="API De Usuários Buscar usuário por id inexistente" duration="13"/>
-    <testCase name="API De Usuários Adicionar usuário com dados válidos" duration="108"/>
-    <testCase name="API De Usuários Adicionar usuário com dados inválidos" duration="80"/>
-    <testCase name="API De Usuários Buscar usuário por nome existente" duration="14"/>
-    <testCase name="API De Usuários Buscar usuário por nome inexistente" duration="25"/>
-    <testCase name="API De Usuários Excluir Usuário existente" duration="22"/>
-    <testCase name="API De Usuários Excluir Usuário inexistente" duration="10"/>
-    <testCase name="API De Usuários Alterar senha pelo ID" duration="28"/>
-    <testCase name="API De Usuários Alterar contato pelo ID" duration="9"/>
-    <testCase name="API De Usuários Alterar usuario pelo ID valido " duration="10"/>
+    <testCase name="API De Usuários Listar usuários" duration="72"/>
+    <testCase name="API De Usuários Buscar usuário por id existente" duration="13"/>
+    <testCase name="API De Usuários Buscar usuário por id inexistente" duration="10"/>
+    <testCase name="API De Usuários Adicionar usuário com dados válidos" duration="69"/>
+    <testCase name="API De Usuários Adicionar usuário com dados inválidos" duration="45"/>
+    <testCase name="API De Usuários Buscar usuário por nome existente" duration="16"/>
+    <testCase name="API De Usuários Buscar usuário por nome inexistente" duration="11"/>
+    <testCase name="API De Usuários Excluir Usuário existente" duration="19"/>
+    <testCase name="API De Usuários Excluir Usuário inexistente" duration="18"/>
+    <testCase name="API De Usuários Alterar senha pelo ID" duration="11"/>
+    <testCase name="API De Usuários Alterar contato pelo ID" duration="15"/>
+    <testCase name="API De Usuários Alterar usuario pelo ID valido " duration="8"/>
     <testCase name="API De Usuários Não alterar usuario com ID invalido " duration="10"/>
-    <testCase name="API De Usuários Alterar endereço pelo ID valido " duration="10"/>
-    <testCase name="API De Usuários Não alterar endereço com ID invalido " duration="14"/>
-    <testCase name="API De Usuários Não deve achar dados-pessoais pelo ID inexistente" duration="12"/>
+    <testCase name="API De Usuários Alterar endereço pelo ID valido " duration="12"/>
+    <testCase name="API De Usuários Não alterar endereço com ID invalido " duration="19"/>
+    <testCase name="API De Usuários Não deve achar dados-pessoais pelo ID inexistente" duration="11"/>
+  </file>
+  <file path="C:\Users\Lenovo\Desktop\backup2107\las-api\__tests__\tiposVendas.test.js">
+    <testCase name="API De Tipos de Vendas Listar Tipos de Vendas" duration="140"/>
+    <testCase name="API De Tipos de Vendas Buscar Tipos de vendas por id existente" duration="24"/>
+    <testCase name="API De Tipos de Vendas Buscar Tipos de vendas por id inexistente" duration="13"/>
+    <testCase name="API De Tipos de Vendas Excluir Tipo de vendas existente" duration="20"/>
+    <testCase name="API De Tipos de Vendas Excluir Tipo de vendas inexistente" duration="16"/>
+    <testCase name="API De Tipos de Vendas Alterar tipos de venda pelo ID valido " duration="134"/>
+    <testCase name="API De Tipos de Vendas Não alterar tipos de venda com ID invalido " duration="14"/>
   </file>
   <file path="C:\Users\Lenovo\Desktop\backup2107\las-api\__tests__\example.test.js">
-    <testCase name="Home URL Base" duration="148"/>
+    <testCase name="Home URL Base" duration="151"/>
   </file>
   <file path="C:\Users\Lenovo\Desktop\backup2107\las-api\__tests__\index.test.js">
-    <testCase name="Página inicial URL Base" duration="14"/>
+    <testCase name="Página inicial URL Base" duration="11"/>
   </file>
 </testExecutions>

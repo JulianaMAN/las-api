@@ -40,7 +40,7 @@ describe("API De Tipos de Vendas", () => {
 
     test("Alterar tipos de venda pelo ID valido ", async () => {
       const alteracoes = { descricao: "comida" };
-      const resp = await request.put("/eventos/2").send(alteracoes);
+      const resp = await request.put("/tipos-vendas/2").send(alteracoes);
       expect(resp.statusCode).toBe(200);
     });
 
