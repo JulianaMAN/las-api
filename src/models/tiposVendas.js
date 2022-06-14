@@ -49,17 +49,9 @@ alterar(id, valores, res, next) {
   });
 }
 
-excluir(id, res, next) {
-  const sql = "DELETE FROM tiposVendas WHERE id = ?";
-  pool.query(sql, id, (erro) => {
-    if (erro) {
-      next(erro);
-    } else {
-      res.status(200).json({ id });
-    }
-  });
- }
-
+async excluir(id) {
+  return repositorio.excluir(id);
+}
 
 }
 module.exports = new Venda();

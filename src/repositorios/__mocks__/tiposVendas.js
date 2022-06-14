@@ -16,9 +16,12 @@ class TiposVendas {
       }
 
       excluir(id) {
-        const vendasFiltradas = tiposVendasMock.filter((venda) => venda.id !== id);
-        return Promise.resolve(vendasFiltradas);
+        return Promise.resolve(tiposVendasMock.find((tiposvendas) => tiposvendas.id === id));
       }
+      // excluir(id) {
+      //   const vendasFiltradas = tiposVendasMock.filter((venda) => venda.id !== id);
+      //   return Promise.resolve(vendasFiltradas);
+      // }
 }
 
 module.exports = new TiposVendas();

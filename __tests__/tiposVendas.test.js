@@ -28,12 +28,14 @@ describe("API De Tipos de Vendas", () => {
     const resp = await request.get("/tipos-vendas/9999");
     expect(resp.statusCode).toBe(404);
     });
-    test("Excluir Tipo de vendas",async () => {
-      const resp = await request.delete("/tipos-vendas/3");
-      expect(resp.statusCode).toBe(200);
-      expect(resp.body).toEqual({
-        "id": 3
-      });
+    test("Excluir Tipo de vendas existente",async () => {
+      const resp = await request.delete("/tipos-vendas/1");
+      expect(resp.statusCode).toBe(204);
+    });
+
+    test("Excluir Tipo de vendas inexistente",async () => {
+      const resp = await request.delete("/tipos-vendas/9");
+      expect(resp.statusCode).toBe(404);
     });
 
     test("Alterar tipos de venda pelo ID valido ", async () => {

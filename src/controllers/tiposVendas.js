@@ -1,3 +1,4 @@
+const tiposVendas = require("../models/tiposVendas");
 const Venda = require("../models/tiposVendas");
 
 module.exports = (app) => {
@@ -25,7 +26,14 @@ app.get("/tipos-vendas",(_req, res, next) => {
 
   app.delete("/tipos-vendas/:id", (req, res, next) => {
     const id = parseInt(req.params.id);
-    Venda.excluir(id, res, next);
+    tiposVendas.excluir(id)
+    .then((resultado) => { 
+      if (resultado) {
+        return res.status(204).end();
+      }
+       return res.status(404).end();
+    })
+    .catch((erros) => next(erros));
   });
 
   

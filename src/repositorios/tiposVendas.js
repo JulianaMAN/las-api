@@ -6,6 +6,11 @@ class Venda {
     return query(sql, {id, descricao});
   }
 
+  excluir(id) {
+    const sql = "DELETE FROM tiposvendas WHERE id = ?";
+    return query(sql,id);
+  }
+
 //   listar() {
 //       const sql ="SELECT * FROM tiposVendas";
 //       return query(sql);
