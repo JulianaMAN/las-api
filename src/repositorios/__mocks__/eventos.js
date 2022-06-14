@@ -12,6 +12,10 @@ class Evento {
     return Promise.resolve(eventosMock.filter((evento) => evento.id === id));    
   }
 
+  excluir(id) {
+    return Promise.resolve(eventosMock.find((evento) => evento.id === id));
+  }
+
   listarEventosAgendados() {
     return Promise.resolve(eventosMock.filter((evento) => {
       const dataAtual = moment();

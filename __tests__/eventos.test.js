@@ -120,13 +120,15 @@ describe("API De Eventos", () => {
       });
 
       
-  test("Excluir Evento",async () => {
-     const resp = await request.delete("/eventos/3");
-     expect(resp.statusCode).toBe(200);
-     expect(resp.body).toEqual({
-            "id": 3
-          });
-        });
+  test("Excluir Evento existente",async () => {
+     const resp = await request.delete("/eventos/1");
+     expect(resp.statusCode).toBe(204);
+    });
+
+    test("Excluir Evento inexistente",async () => {
+      const resp = await request.delete("/eventos/9");
+      expect(resp.statusCode).toBe(404);
+    });
 
         test("Alterar evento pelo ID valido ", async () => {
           const alteracoes = { descricao: "carnaval meio do ano" };

@@ -11,6 +11,11 @@ class Evento {
       return query(sql);
   }
 
+  excluir(id) {
+    const sql = "DELETE FROM Eventos WHERE id = ?";
+    return query(sql,id);
+  }
+
   buscarPorId(id) {
     const sql = "SELECT * FROM Eventos WHERE id = ?";
     return query(sql,id);

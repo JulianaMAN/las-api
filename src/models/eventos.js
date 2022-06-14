@@ -85,15 +85,8 @@ async isURLValida(url) {
     });
   }
 
-  excluir(id, res, next) {
-    const sql = "DELETE FROM Eventos WHERE id = ?";
-    pool.query(sql, id, (erro) => {
-      if (erro) {
-        next(erro);
-      } else { 
-        res.status(200).json({ id });
-      }
-    });
+  async excluir(id) {
+    return repositorio.excluir(id);
   }
 
   isDatasValidas(evento) {

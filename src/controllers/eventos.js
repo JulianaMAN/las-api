@@ -38,9 +38,20 @@ module.exports = (app) => {
         Eventos.alterar(id, valores, res, next);
       });
     
+      // app.delete("/eventos/:id", (req, res, next) => {
+      //   const id = parseInt(req.params.id);
+      //   Eventos.excluir(id, res, next);
+      // });
       app.delete("/eventos/:id", (req, res, next) => {
         const id = parseInt(req.params.id);
-        Eventos.excluir(id, res, next);
+        Eventos.excluir(id)
+        .then((resultado) => { 
+          if (resultado) {
+            return res.status(204).end();
+          }
+           return res.status(404).end();
+        })
+        .catch((erros) => next(erros));
       });
 
       app.post("/eventos/nome", (req, res, next) => {
